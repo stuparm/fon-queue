@@ -24,6 +24,9 @@ public class QueueDataConfig {
 		return new FacultyStand(Constants.STAND_1);
 	}
 	
+	
+	
+	
 	@Bean
 	public FacultyStand stand_2() {
 		return new FacultyStand(Constants.STAND_2);
