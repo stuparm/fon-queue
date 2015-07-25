@@ -16,6 +16,8 @@ public class StandJson {
 	private StudentJson NEXT_STUDENT;
 	private String PRIMARY_Q_LENGTH;
 	private List<StudentJson> TEMP_QUEUE;
+	private boolean INSERTABLE;
+	
 	public boolean isOPEN() {
 		return OPEN;
 	}
@@ -43,7 +45,12 @@ public class StandJson {
 	public void setTEMP_QUEUE(List<StudentJson> tEMP_QUEUE) {
 		TEMP_QUEUE = tEMP_QUEUE;
 	}
-	
+	public boolean isInsertable() {
+		return INSERTABLE;
+	}
+	public void setInsertable(boolean iNSERTABLE) {
+		this.INSERTABLE = iNSERTABLE;
+	}
 	
 
 }

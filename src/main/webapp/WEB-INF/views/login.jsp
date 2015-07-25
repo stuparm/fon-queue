@@ -14,7 +14,7 @@
 
 <link type="text/css" rel="stylesheet" href="resources/css/styles.css" />
 <link type="text/css" rel="stylesheet"
-	href="resources/css/bootstrap.min.css" />
+	href="resources/css/bootstrap.css" />
 
 </head>
 <body>
@@ -22,25 +22,38 @@
 
 	<div class="page-header">
 		<h1>
-			Fakultet organizacionih nauka  <small>Studentska sluzba</small>
+			Fakultet organizacionih nauka<small>Studentska služba</small>
 		</h1>
 	</div>
 
 
+	
+			<c:if test="${not empty errorMessage}">
+				<div class="alert alert-danger" role="alert">
+					<div class="ad_login-form-error">
+						<div class="col-md-1"></div>
+						<div class="col-md-11">
+							<c:if test="${not empty errorMessage}">
+								<div>${ errorMessage }</div>
+							</c:if>
+						</div>
+					</div>
+				</div>
+			</c:if>
 
-	<c:if test="${not empty errorMessage}">
-		<div class="alert alert-danger" role="alert">${ errorMessage }</div>
-	</c:if>
+	<div class="ad_login-form">
+		<div class="col-md-1"></div>
+		<div class="col-md-11">
+			<form method="post" action="j_spring_security_check">
 
+				<label for="j_username">Username</label> <br /> <input type="text"
+					name="j_username"> <br /> <br /> <label for="j_password">Password</label>
+				<br /> <input type="password" name="j_password"> <br /> <br />
 
-	<form method="post" action="j_spring_security_check">
+				<button type="submit">Log in</button>
+			</form>
+		</div>
 
-		<label for="j_username">Username</label> <br /> <input type="text"
-			name="j_username"> <br /> <br /> <label for="j_password">Password</label>
-		<br /> <input type="password" name="j_password"> <br /> <br />
-
-		<button type="submit">Log in</button>
-	</form>
-
+	</div>
 </body>
 </html>

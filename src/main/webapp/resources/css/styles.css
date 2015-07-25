@@ -1,4 +1,28 @@
-.ms_header {
-	margin-top: 0px;
+html, body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.ad_login-form {
 	
+}
+
+.ad_login-form-error {
+	margin-bottom: 20px;
+}
+
+.ad_dugme_otvori_zatvori {
+	margin-bottom: 50px;
+	height: 150px;
+	box-shadow: 1px 1px 10px #888888;
+	text-align:center;
+	background-color: #EEE;
+}
+
+.ad_dugme_omoguci_onemoguci {
+	height: 150px;
+	box-shadow: 1px 1px 10px #888888;
+}
+
+.ad_dugme {
+	position: center;
 }

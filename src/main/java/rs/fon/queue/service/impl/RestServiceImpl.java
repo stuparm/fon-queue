@@ -78,6 +78,7 @@ public class RestServiceImpl implements RestService {
 		standJson.setOPEN(getFacultyService().isStandOpen(standNumber));
 		standJson.setPRIMARY_Q_LENGTH(getFacultyService().getQueueSize(standNumber)+"");
 		standJson.setTEMP_QUEUE(createTempJsonQueue(standNumber));
+		standJson.setInsertable(getFacultyService().isInsertable(standNumber));
 		return standJson;
 	}
 	
