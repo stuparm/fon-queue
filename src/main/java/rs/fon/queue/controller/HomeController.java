@@ -17,8 +17,7 @@ public class HomeController {
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String login(@RequestParam(value="error", required=false) Boolean error, Model model) {
 		if (error != null && error == true) {
-			model.addAttribute("errorMessage", "Pogresno uneti korisnicko ime i/ili lozinka.");
-			System.out.println("DADADA");
+			model.addAttribute("errorMessage", "Pogrešno uneti korisničko ime i/ili lozinka.");
 		}
 		return "login";
 	}

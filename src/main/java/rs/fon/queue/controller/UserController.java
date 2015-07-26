@@ -62,40 +62,40 @@ public class UserController {
 		if (action == Action.OPEN) {
 			boolean success = getFacultyService().openStand(standNumber);
 			if (success)
-				message = "Uspesno ste otvorili salter.";
+				message = "Uspešno ste otvorili šalter.";
 			else
-				message = "Salter je vec otvoren.";
+				message = "Šalter je već otvoren.";
 		}
 		//Action.CLOSE
 		if (action == Action.CLOSE) {
 			boolean success = getFacultyService().closeStand(standNumber);
 			if (success)
-				message = "Uspesno ste zatvorili salter.";
+				message = "Uspešno ste zatvorili šalter.";
 			else
-				message = "Salter je vec zatvoren.";
+				message = "Šalter je već zatvoren.";
 		}	
 		//
 		if (action == Action.NEXT_STUDENT) {
 			if (getFacultyService().isStandOpen(standNumber))
 				getFacultyService().removeFirstStudent(standNumber);
 			else
-				message="Morate prvo otvoriti salter.";
+				message="Morate prvo otvoriti šalter.";
 		}
 		if (action == Action.ENABLE_INSERT) {
 			if (getFacultyService().isInsertable(standNumber))
-				message = "Prijavljivanje studenata u red je vec omoguceno.";
+				message = "Prijavljivanje studenata u red za šalter je već omogućeno.";
 			else {
 				getFacultyService().enableInsertion(standNumber);
-				message = "Omoguceno je prijavljivanje studenata u red za salter.";
+				message = "Omogućeno je prijavljivanje studenata u red za šalter.";
 			}
 		}
 		if (action == Action.DISABLE_INSERT) {
 			if (getFacultyService().isInsertable(standNumber)) {
 				getFacultyService().disableInsertion(standNumber);
-				message = "Nije vise omoguceno prijavljivanje studenata u red za salter.";
+				message = "Studenti se više ne mogu prijavljivati u red za šalter.";
 			}
 			else {
-				message = "Prijavljivanje studenata u red je vec onemoguceno.";
+				message = "Prijavljivanje studenata u red je već onemogućeno.";
 			}
 		}
 		
@@ -128,9 +128,9 @@ public class UserController {
 	private InformationModel createInformationModel(int standNumber) {
 		InformationModel infoModel = new InformationModel();
 		if (getFacultyService().isStandOpen(standNumber))
-			infoModel.setStatus("Salter broj "+ standNumber+" je otvoren.");
+			infoModel.setStatus("Šalter broj "+ standNumber+" je otvoren.");
 		else 
-			infoModel.setStatus("Salter broj "+ standNumber+" je zatvoren.");
+			infoModel.setStatus("Šalter broj "+ standNumber+" je zatvoren.");
 		
 		int queueSize = getFacultyService().getQueueSize(standNumber);
 		infoModel.setQueueSize(queueSize);

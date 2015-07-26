@@ -1,5 +1,5 @@
 html, body {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family:'PT Serif', serif;
 }
 
 .ad_login-form {
@@ -8,25 +8,63 @@ html, body {
 
 .ad_login-form-error {
 	margin-bottom: 20px;
+	margin-left: -15px;
+}
+
+.ad_message {
+	margin-left: 14px;
 }
 
 .ad_dugme_otvori_zatvori {
-	margin-bottom: 50px;
+	margin-top: 40px;
+	margin-bottom: 75px;
 	height: 150px;
-	box-shadow: 1px 1px 10px #888888;
 	text-align:center;
-	background-color: #EEE;
 }
 
 .ad_dugme_omoguci_onemoguci {
 	height: 150px;
-	box-shadow: 1px 1px 10px #888888;
+	text-align:center;
 }
 
 .ad_dugme {
 	position: center;
 }
 
-.proba {
-	
+.ad_header {
+	font-size: 50px;
+	text-align: right;
+	color: white;
+	padding: 30px;
+}
+
+.ad_user_header {
+	color: white;
+	padding: 15px;
+	position: right;
+	/* margin-left: 14px; */
+}
+
+.ad_broj {
+	font-size: 60px;
+}
+
+.ad_indeks {
+	font-size: 16px;
+}
+.ad_poruka_status {
+	margin-top: 40px;
+	font-size: 16px;
+}
+
+.ad_redni_broj {
+	font-size: 16px;
+}
+
+.ad_duzina_reda {
+	font-size: 16px;
+}
+
+.ad_dugme_izbaci {
+	margin-top: 42px;
 }

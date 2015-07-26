@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
+encoding//src/main/java/rs/fon/queue/controller/HomeController.java=UTF-8
+encoding//src/main/java/rs/fon/queue/controller/UserController.java=UTF-8
 encoding//src/main/webapp/WEB-INF/views/user-page.jsp=UTF-8

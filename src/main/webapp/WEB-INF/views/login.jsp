@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Studentska služba FON-a</title>
 
 <link type="text/css" rel="stylesheet" href="resources/css/styles.css" />
 <link type="text/css" rel="stylesheet"
@@ -21,39 +21,39 @@
 
 
 	<div class="page-header">
-		<h1>
-			Fakultet organizacionih nauka<small>Studentska služba</small>
-		</h1>
+		<div class="ad_header">
+			<h2>Fakultet organizacionih nauka</h2>
+			<h3>Servis studentske službe</h3>	
+		</div>
 	</div>
 
 
-	
-			<c:if test="${not empty errorMessage}">
-				<div class="alert alert-danger" role="alert">
-					<div class="ad_login-form-error">
-						<div class="col-md-1"></div>
-						<div class="col-md-11">
-							<c:if test="${not empty errorMessage}">
-								<div>${ errorMessage }</div>
-							</c:if>
-						</div>
-					</div>
+
+	<c:if test="${not empty errorMessage}">
+		<div class="alert alert-danger" role="alert">
+			<div class="ad_login-form-error">
+				<div class="col-md-1"></div>
+				<div class="col-md-11">
+					<c:if test="${not empty errorMessage}">
+						<div>${ errorMessage }</div>
+					</c:if>
 				</div>
-			</c:if>
+			</div>
+		</div>
+	</c:if>
 
 	<div class="ad_login-form">
 		<div class="col-md-1"></div>
 		<div class="col-md-11">
 			<form method="post" action="j_spring_security_check">
-
-				<label for="j_username">Username</label> <br /> <input type="text"
-					name="j_username"> <br /> <br /> <label for="j_password">Password</label>
-				<br /> <input type="password" name="j_password"> <br /> <br />
-
-				<button type="submit">Log in</button>
+				<label for="j_username">Korisničko ime</label> <br /> <input
+					type="text" name="j_username"> <br /> <br /> <label
+					for="j_password">Šifra</label> <br /> <input type="password"
+					name="j_password"> <br /> <br />
+				<button type="submit" class="btn btn-primary">Prijavi se</button>
 			</form>
 		</div>
-
 	</div>
+
 </body>
 </html>
