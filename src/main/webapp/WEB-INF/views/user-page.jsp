@@ -43,72 +43,79 @@
 	</div>
 
 	<div class="ad_margina">
-		<div class="col-md-3">
-			<div class="ad_dugme_otvori_zatvori">
-				<sf:form action="/queue/user" method="POST">
-					<input type="hidden" name="action" value="OPEN" />
-					<button class="btn btn-success" type="submit">Otvori
-						šalter</button>
-				</sf:form>
-				<br />
-				<sf:form action="/queue/user" method="POST">
-					<input type="hidden" name="action" value="CLOSE" />
-					<button class="btn btn-success" type="submit">Zatvori
-						šalter</button>
-				</sf:form>
-			</div>
 
-			<div class="ad_dugme_omoguci_onemoguci">
-				<sf:form action="/queue/user" method="POST">
-					<input type="hidden" name="action" value="DISABLE_INSERT" />
-					<button class="btn btn-success" type="submit">Zatvori
-						prijave studenata</button>
-				</sf:form>
-				<br />
-				<sf:form action="/queue/user" method="POST">
-					<input type="hidden" name="action" value="ENABLE_INSERT" />
-					<button class="btn btn-success" type="submit">Omogući
-						dalje prijave studenata</button>
-				</sf:form>
-			</div>
-		</div>
-	</div>
 
-	<div class="col-md-1"></div>
 
-	<div class="col-md-7">
-		<div class="ad_main">
-
-			<div class="ad_poruka_status">
-				<b> Status šaltera: </b> ${informationModel.status } <br />
-			</div>
-
-			<div class="ad_duzina_reda">
-				<b> Broj studenata u redu: </b> ${informationModel.queueSize} <br />
-				<br /> <br /><br />
-			</div>
-
-			<div class="ad_redni_broj">
-				<b> Sledeći redni broj: </b>  ${informationModel.nextOrdNumber} <br />
-			</div>
-
-			<div class="ad_indeks">
-				<b> Broj indeksa studenta: </b>
-				<div class="ad_broj"> ${informationModel.nextStudentIndex} 
+		<div class="ad_prva_kolona">
+			<div class="col-md-3">
+				<div class="ad_dugme_otvori_zatvori">
+					<sf:form action="/queue/user" method="POST">
+						<input type="hidden" name="action" value="OPEN" />
+						<button class="btn btn-success" type="submit">Otvori
+							šalter</button>
+					</sf:form>
 					<br />
+					<sf:form action="/queue/user" method="POST">
+						<input type="hidden" name="action" value="CLOSE" />
+						<button class="btn btn-success" type="submit">Zatvori
+							šalter</button>
+					</sf:form>
+				</div>
+
+				<div class="ad_dugme_omoguci_onemoguci">
+					<sf:form action="/queue/user" method="POST">
+						<input type="hidden" name="action" value="DISABLE_INSERT" />
+						<button class="btn btn-success" type="submit">Zatvori
+							prijave studenata</button>
+					</sf:form>
+					<br />
+					<sf:form action="/queue/user" method="POST">
+						<input type="hidden" name="action" value="ENABLE_INSERT" />
+						<button class="btn btn-success" type="submit">Omogući
+							dalje prijave studenata</button>
+					</sf:form>
 				</div>
 			</div>
-			<div class="ad_dugme_izbaci">
-				<sf:form action="/queue/user" method="POST">
-					<input type="hidden" name="action" value="NEXT_STUDENT" />
-					<button class="btn btn-primary" type="submit"
-						style="font-size: 16px; width: 200px">Izbaci iz reda</button>
-				</sf:form>
+		</div>
+
+		<div class="col-md-2"></div>
+
+		<div class="col-md-4">
+			<div class="ad_druga_kolona">
+				<div class="ad_redni_broj">
+					<b> Sledeći redni broj: </b> ${informationModel.nextOrdNumber} <br />
+				</div>
+
+				<div class="ad_indeks">
+					<b> Broj indeksa studenta: </b>
+					<div class="ad_broj">
+						${informationModel.nextStudentIndex} <br />
+					</div>
+				</div>
+				<div class="ad_dugme_izbaci">
+					<sf:form action="/queue/user" method="POST">
+						<input type="hidden" name="action" value="NEXT_STUDENT" />
+						<button class="btn btn-primary" type="submit"
+							style="font-size: 16px; width: 200px">Izbaci iz reda</button>
+					</sf:form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-1"></div>
+
+		<div class="col-md-3">
+			<div class="ad_treca_kolona">
+				<div class="ad_poruka_status">
+					<b> Status šaltera: </b> ${informationModel.status } <br />
+				</div>
+
+				<div class="ad_duzina_reda">
+					<b> Broj studenata u redu: </b>
+					<div class="ad_broj">${informationModel.queueSize}</div>
+				</div>
 			</div>
 		</div>
 	</div>
-
-
-	<br />
 </body>
 </html>

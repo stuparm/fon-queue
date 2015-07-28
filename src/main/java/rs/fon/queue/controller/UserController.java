@@ -128,9 +128,9 @@ public class UserController {
 	private InformationModel createInformationModel(int standNumber) {
 		InformationModel infoModel = new InformationModel();
 		if (getFacultyService().isStandOpen(standNumber))
-			infoModel.setStatus("Šalter broj "+ standNumber+" je otvoren.");
+			infoModel.setStatus("Otvoren");
 		else 
-			infoModel.setStatus("Šalter broj "+ standNumber+" je zatvoren.");
+			infoModel.setStatus("Zatvoren");
 		
 		int queueSize = getFacultyService().getQueueSize(standNumber);
 		infoModel.setQueueSize(queueSize);
@@ -146,13 +146,6 @@ public class UserController {
 		}
 		return infoModel;
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	public FacultyService getFacultyService() {

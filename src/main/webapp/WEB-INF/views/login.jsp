@@ -41,16 +41,15 @@
 			</div>
 		</div>
 	</c:if>
-
-	<div class="ad_login-form">
-		<div class="col-md-1"></div>
-		<div class="col-md-11">
+	
+<div class="col-md-12">
+	<div class="ad_login-form">	
 			<form method="post" action="j_spring_security_check">
 				<label for="j_username">Korisničko ime</label> <br /> <input
 					type="text" name="j_username"> <br /> <br /> <label
 					for="j_password">Šifra</label> <br /> <input type="password"
 					name="j_password"> <br /> <br />
-				<button type="submit" class="btn btn-primary">Prijavi se</button>
+				<button type="submit" class="btn btn-primary" style="font-size: 16px">Prijavi se</button>
 			</form>
 		</div>
 	</div>
