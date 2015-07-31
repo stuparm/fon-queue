@@ -73,3 +73,7 @@ html, body {
 .ad_dugme_izbaci {
 	margin-top: 154px;
 }
+.ms_error {
+	font-style: italic;
+	color: red;
+}

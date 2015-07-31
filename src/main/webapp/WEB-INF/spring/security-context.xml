@@ -8,23 +8,21 @@
 	<!-- Configuration for USER login -->
 	<http use-expressions="true" authentication-manager-ref="userAuthenticationManager">
 		
-		<form-login 
-			always-use-default-target="false" 
+		<form-login  
 			login-page="/"
-			default-target-url="/user" 
-			authentication-failure-url="/?error=true" />
+			authentication-failure-url="/?error=true" 
+			authentication-success-handler-ref="loginAuthenticationSuccessHandler"
+			/>
 
 
 
 
 
-		<!-- <form-login always-use-default-target="false" login-page="/admin/login" 
-			default-target-url="/admin/page" authentication-failure-url="/admin/login?error=true" 
-			/> -->
+	
 
 		<logout invalidate-session="true" logout-success-url="/" />
 		<intercept-url pattern="/user**" access="hasRole('USER')" />
-		<intercept-url pattern="/admin/page/**" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/admin**" access="hasRole('ADMIN')" />
 		<intercept-url pattern="/**" access="permitAll" />
 	</http>
 
@@ -36,11 +34,13 @@
 	</authentication-manager>
 	<!-- End of configuration for USER login -->
 
-
-
 	<beans:bean id="passwordEncoder"
 		class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
 		<beans:constructor-arg value="256" />
 	</beans:bean>
+	
+	<beans:bean id="loginAuthenticationSuccessHandler"
+        class="rs.fon.queue.LoginAuthenticationSuccessHandler" />
+	
 
 </beans:beans>

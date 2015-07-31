@@ -16,6 +16,10 @@
 <link type="text/css" rel="stylesheet"
 	href="resources/css/bootstrap.css" />
 
+
+
+
+
 </head>
 <body>
 	<div class="page-header">
@@ -33,7 +37,8 @@
 					</tr>
 				</table>
 				<br />
-				<button type="submit" class="btn btn-warning">Odjavi se</button>
+				<a class="btn btn-warning" href="<c:url value="j_spring_security_logout" />" >Odjavi se</a>
+				<!-- <button type="submit" class="btn btn-warning">Odjavi se</button> -->
 			</div>
 		</div>
 	</div>
@@ -49,30 +54,29 @@
 		<div class="ad_prva_kolona">
 			<div class="col-md-3">
 				<div class="ad_dugme_otvori_zatvori">
+					
 					<sf:form action="/queue/user" method="POST">
 						<input type="hidden" name="action" value="OPEN" />
-						<button class="btn btn-success" type="submit">Otvori
-							šalter</button>
-					</sf:form>
+						<button class="btn btn-success" type="submit">Otvori šalter</button>
+					</sf:form> 
+					
+
 					<br />
 					<sf:form action="/queue/user" method="POST">
 						<input type="hidden" name="action" value="CLOSE" />
-						<button class="btn btn-success" type="submit">Zatvori
-							šalter</button>
+						<button class="btn btn-success" type="submit">Zatvori šalter</button>
 					</sf:form>
 				</div>
 
 				<div class="ad_dugme_omoguci_onemoguci">
 					<sf:form action="/queue/user" method="POST">
 						<input type="hidden" name="action" value="DISABLE_INSERT" />
-						<button class="btn btn-success" type="submit">Zatvori
-							prijave studenata</button>
+						<button class="btn btn-success" type="submit">Zatvori prijave studenata</button>
 					</sf:form>
 					<br />
 					<sf:form action="/queue/user" method="POST">
 						<input type="hidden" name="action" value="ENABLE_INSERT" />
-						<button class="btn btn-success" type="submit">Omogući
-							dalje prijave studenata</button>
+						<button class="btn btn-success" type="submit">Omogući dalje prijave studenata</button>
 					</sf:form>
 				</div>
 			</div>

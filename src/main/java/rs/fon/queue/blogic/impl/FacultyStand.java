@@ -180,4 +180,13 @@ public class FacultyStand {
 		return insertable;
 	}
 
+	public void resetState() {
+		primaryQueue = new PrimaryQueue();
+		tempQueue = new TempQueue(Constants.TMP_QUEUE_CAPACITY);
+		ordNum = 1;
+
+		open = false;
+		insertable = false;
+	}
+	
 }

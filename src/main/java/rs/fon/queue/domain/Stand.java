@@ -39,4 +39,16 @@ public class Stand {
 	}
 	
 	
+	public Stand() {
+		
+	}
+	
+	
+	public Stand(Long stand_id, Integer stand_number) {
+		this.stand_id = stand_id;
+		this.stand_number = stand_number;
+	}
+
+	
+	
 }

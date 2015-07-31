@@ -4,6 +4,7 @@ package rs.fon.queue.service.impl;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import rs.fon.queue.blogic.exception.InsertionDisabledException;
@@ -123,6 +124,16 @@ public class FacultyServiceImpl implements FacultyService{
 		getStandByNumber(standNumber).disableInsertion();
 	}
 	
+	@Override
+	@Scheduled(cron="0 4 2 * * *")
+	public void resetState() {
+		System.out.println("FacultyServiceImpl - 130 =====================================");
+		stand_1.resetState();
+		stand_2.resetState();
+		stand_3.resetState();
+		stand_4.resetState();
+		stand_5.resetState();
+	}
 	
 	
 	/**

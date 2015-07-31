@@ -34,9 +34,90 @@ public class AdminRepositoryImpl implements AdminRepository{
 
 	@Override
 	@Transactional
+	public Admin findByUsernameAndPassword(String username, String password) {
+		TypedQuery<Admin> query = getEntityManager().createNamedQuery(Admin.FIND_BY_NAME_AND_PASS, Admin.class);
+		query.setParameter("username", username);
+		query.setParameter("password", password);
+		List<Admin> results = query.getResultList();
+		if (results == null || results.isEmpty())
+			return null;
+		return results.get(0);
+	}
+
+	
+	@Override
+	@Transactional
 	public void insertUser(User user) {
 		getEntityManager().persist(user);;
 	}
+	
+	
+	@Override
+	public List<Admin> getAdmins() {
+		TypedQuery<Admin> query = getEntityManager().createQuery("SELECT a from Admin a", Admin.class);
+		List<Admin> results = query.getResultList();
+		return results;
+	}
+	
+	@Override
+	public List<User> getUsers() {
+		TypedQuery<User> query = getEntityManager().createQuery("SELECT u from User u", User.class);
+		List<User> results = query.getResultList();
+		return results;
+	}
+	
+	@Override
+	@Transactional
+	public boolean delete(User user) {
+		try {
+			getEntityManager().remove(getEntityManager().contains(user) ? user : getEntityManager().merge(user));
+		} catch (IllegalArgumentException e) {
+			return false;
+		}
+		return true;
+	}
+	
+	@Override
+	@Transactional
+	public void insertAdmin(Admin admin) {
+		getEntityManager().persist(admin);
+		
+	}
+	
+	@Override
+	@Transactional
+	public boolean delete(Admin admin) {
+		try {
+			getEntityManager().remove(getEntityManager().contains(admin) ? admin : getEntityManager().merge(admin));
+		} catch (IllegalArgumentException e) {
+			return false;
+		}
+		return true;
+	}
+	
+	@Override
+	@Transactional
+	public boolean update(User user) {
+		try {
+			getEntityManager().merge(user);
+		} catch (IllegalArgumentException e) {
+			return false;
+		}
+		return true;
+	}
+	
+	@Override
+	@Transactional
+	public boolean update(Admin admin) {
+		try {
+			getEntityManager().merge(admin);
+		} catch (IllegalArgumentException e) {
+			return false;
+		}
+		return true;
+	}
+	
+	
 	
 	public EntityManager getEntityManager() {
 		return entityManager;
@@ -45,6 +126,8 @@ public class AdminRepositoryImpl implements AdminRepository{
 	public void setEntityManager(EntityManager entityManager) {
 		this.entityManager = entityManager;
 	}
+
+
 
 
 	

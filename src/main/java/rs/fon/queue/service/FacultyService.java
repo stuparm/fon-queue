@@ -107,6 +107,11 @@ public interface FacultyService {
 	public void disableInsertion(int standNumber);
 	
 	
+	/**
+	 * Reset states of every stand.<br/>
+	 * Priority and temp queues will be empty and stands will be closed. 
+	 */
+	public void resetState();
 	
 	
 }

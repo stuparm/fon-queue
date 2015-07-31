@@ -12,7 +12,8 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @NamedQueries( {
-	@NamedQuery(name=User.FIND_BY_NAME, query="select u from User u where u.username = :username")
+	@NamedQuery(name=User.FIND_BY_NAME, query="select u from User u where u.username = :username"),
+	@NamedQuery(name=User.FINF_BY_NAME_AND_PASSWORD, query="select u from User u where u.username = :username and u.password=:password")
 })
 
 
@@ -21,7 +22,7 @@ import javax.persistence.Table;
 public class User {
 
 	public static final String FIND_BY_NAME = "User.findByName";
-	
+	public static final String FINF_BY_NAME_AND_PASSWORD = "User,findByNAmeAndPassword";
 	
 	@Id
 	@Column(name="user_id")
