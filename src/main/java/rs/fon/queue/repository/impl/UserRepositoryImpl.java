@@ -30,11 +30,6 @@ public class UserRepositoryImpl implements UserRepository{
 	}
 	
 	
-	@Override
-	public boolean deleteUser(User user) {
-		// TODO Auto-generated method stub
-		return false;
-	}
 	
 	@Override
 	@Transactional

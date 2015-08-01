@@ -24,11 +24,11 @@ public class TempQueue implements Queue {
 
 	@Override
 	public void insert(Student student) throws StudentAlreadyExistException {
-		assert array != null; // TODO assert
-		for (Student s : array) {
-			if (s!= null && s.equals(student))
-				throw new StudentAlreadyExistException();
-		}
+//		for (Student s : array) {
+//			if (s!= null && s.equals(student))
+//				throw new StudentAlreadyExistException();
+//		}
+		
 		array[top = ++top % array.length] = student;
 	}
 

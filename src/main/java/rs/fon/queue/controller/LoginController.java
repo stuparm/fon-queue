@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Handles requests for the application home page.
  */
 @Controller
-public class HomeController {
+public class LoginController {
 	
 
-	@RequestMapping(value="/", method=RequestMethod.GET)
+	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String login(@RequestParam(value="error", required=false) Boolean error, Model model) {
 		if (error != null && error == true) {
 			model.addAttribute("errorMessage", "Pogrešno uneti korisničko ime i/ili lozinka.");
 		}
 		return "login";
-	}
+	} 
 	
 }

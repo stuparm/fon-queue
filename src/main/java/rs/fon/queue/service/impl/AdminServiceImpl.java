@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import rs.fon.queue.blogic.exception.AdminAlreadyExistException;
 import rs.fon.queue.blogic.exception.EntityDoesNotExistException;
 import rs.fon.queue.blogic.exception.UserAlreadyExistException;
+import rs.fon.queue.blogic.util.Constants;
 import rs.fon.queue.domain.Admin;
 import rs.fon.queue.domain.Stand;
 import rs.fon.queue.domain.User;
@@ -148,7 +149,7 @@ public class AdminServiceImpl implements AdminService{
 		} catch (NumberFormatException e) {
 			return false;
 		}
-		if (standNumber <= 0 || standNumber > 5)
+		if (standNumber <= 0 || standNumber > Constants.NUMBER_OF_STANDS)
 			return false;
 		Stand stand = new Stand((long) standNumber,standNumber);
 		user.setStand(stand);

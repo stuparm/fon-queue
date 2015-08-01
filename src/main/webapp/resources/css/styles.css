@@ -77,3 +77,6 @@ html, body {
 	font-style: italic;
 	color: red;
 }
+.ms_antispam {
+	display: none;
+}

@@ -4,6 +4,8 @@ public interface Constants {
 
 	public static final int TMP_QUEUE_CAPACITY = 6;
 	
+	public static final int NUMBER_OF_STANDS = 5;
+	
 	
 	public static final String STAND_1 = "STAND_1";
 	public static final String STAND_2 = "STAND_2";

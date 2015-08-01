@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Studentska služba FON-a</title>
 
 <link type="text/css" rel="stylesheet" href="resources/css/styles.css" />
 <link type="text/css" rel="stylesheet"
@@ -163,7 +163,7 @@
 				<div class="form-group">
 					<sf:label path="password" class="col-sm-3 control-label">Lozinka*:</sf:label>
 					<div class="col-sm-8">
-						<sf:input path="password" class="form-control" />
+						<sf:password path="password" class="form-control" />
 						<sf:errors path="password" cssClass="ms_error" />
 					</div>
 				</div>

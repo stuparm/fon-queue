@@ -41,10 +41,6 @@ public class UserController {
 		return "user-page";
 	}
 	
-	@RequestMapping(value="/usre", method=RequestMethod.GET)
-	public String proba(@RequestParam(value="action", required=true)Action action) {
-		return "user-page";
-	}
 	
 	
 	@RequestMapping(value="/user", method=RequestMethod.POST)

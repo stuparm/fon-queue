@@ -1,5 +1,7 @@
 package rs.fon.queue.model;
 
+
+
 public class AdminModel {
 
 	private String username;

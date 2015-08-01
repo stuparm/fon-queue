@@ -3,6 +3,7 @@ package rs.fon.queue.model;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+
 public class CRUDModel {
 
 	@Size(min=3, max=20, message="3-20 karaktera")

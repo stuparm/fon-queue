@@ -10,14 +10,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="refresh" content="5;url=/queue/user" />
 <title>Studentska služba FON-a</title>
 
 <link type="text/css" rel="stylesheet" href="resources/css/styles.css" />
 <link type="text/css" rel="stylesheet"
 	href="resources/css/bootstrap.css" />
-
-
-
 
 
 </head>

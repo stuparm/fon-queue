@@ -127,7 +127,6 @@ public class FacultyServiceImpl implements FacultyService{
 	@Override
 	@Scheduled(cron="0 4 2 * * *")
 	public void resetState() {
-		System.out.println("FacultyServiceImpl - 130 =====================================");
 		stand_1.resetState();
 		stand_2.resetState();
 		stand_3.resetState();

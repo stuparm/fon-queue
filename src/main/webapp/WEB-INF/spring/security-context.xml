@@ -9,8 +9,8 @@
 	<http use-expressions="true" authentication-manager-ref="userAuthenticationManager">
 		
 		<form-login  
-			login-page="/"
-			authentication-failure-url="/?error=true" 
+			login-page="/login"
+			authentication-failure-url="/login?error=true" 
 			authentication-success-handler-ref="loginAuthenticationSuccessHandler"
 			/>
 

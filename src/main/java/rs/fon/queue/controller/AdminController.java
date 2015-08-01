@@ -5,6 +5,7 @@ package rs.fon.queue.controller;
 import java.security.Principal;
 import java.util.List;
 
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ import rs.fon.queue.blogic.exception.AdminAlreadyExistException;
 import rs.fon.queue.blogic.exception.EntityDoesNotExistException;
 import rs.fon.queue.blogic.exception.UserAlreadyExistException;
 import rs.fon.queue.blogic.util.Action;
+import rs.fon.queue.blogic.util.Constants;
 import rs.fon.queue.model.AdminModel;
 import rs.fon.queue.model.CRUDModel;
 import rs.fon.queue.model.PropertyModel;
@@ -159,7 +161,7 @@ public class AdminController {
 
 	private String crudInsertUser(CRUDModel crudModel) {
 		if (!checkStand(crudModel.getStandNumber()))
-			return "Broj šaltera mora biti u opsegu 1-5.";
+			return "Broj šaltera mora biti u opsegu 1-"+Constants.NUMBER_OF_STANDS+".";
 		try {
 			getAdminService().insertUser(crudModel);			
 		} catch (UserAlreadyExistException e) {
@@ -171,7 +173,7 @@ public class AdminController {
 	private boolean checkStand(String standNumber) {
 		try {
 			int standNum = Integer.parseInt(standNumber);
-			if (standNum < 1 || standNum > 5)
+			if (standNum < 1 || standNum > Constants.NUMBER_OF_STANDS)
 				return false;
 		} catch (Exception e) {
 			return false;

@@ -12,12 +12,6 @@ public interface UserRepository {
 	public User findByUsername(String username);
 	
 	
-	/**
-	 * delete concrete user
-	 * @param user
-	 * @return true if delete operation is done, false otherwise
-	 */
-	public boolean deleteUser(User user);
 	
 	
 	/**

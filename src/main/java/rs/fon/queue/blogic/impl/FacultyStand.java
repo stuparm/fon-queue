@@ -42,6 +42,7 @@ public class FacultyStand {
 			primaryQueue.insert(new Student(6, "36"));
 			primaryQueue.insert(new Student(7, "37"));
 			primaryQueue.insert(new Student(8, "38"));
+			ordNum=8;
 		} catch (StudentAlreadyExistException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

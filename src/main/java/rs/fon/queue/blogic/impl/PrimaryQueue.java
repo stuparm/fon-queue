@@ -1,7 +1,9 @@
 package rs.fon.queue.blogic.impl;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import rs.fon.queue.blogic.exception.StudentAlreadyExistException;
 import rs.fon.queue.blogic.interfaces.Queue;
@@ -10,38 +12,49 @@ import rs.fon.queue.blogic.interfaces.Queue;
 public class PrimaryQueue implements Queue {
 
 	private LinkedList<Student> list;
-
+	private Map<String, Student> map; // key <- broj indeksa, value <- student 
+	
+	
 	public PrimaryQueue() {
 		list = new LinkedList<Student>();
+		map = new HashMap<String, Student>();
 	}
 
 	@Override
 	public void insert(Student student) throws StudentAlreadyExistException {
-		if (list.contains(student))
+//		if (list.contains(student))
+//			throw new StudentAlreadyExistException();
+//		list.addLast(student);
+		if (map.containsKey(student.getIndex()))
 			throw new StudentAlreadyExistException();
-		list.addLast(student);
+		list.add(student);
+		map.put(student.getIndex(), student);
 
 	}
 
 	@Override
 	public Student remove() {
-		assert list != null; // TODO assert
+//		if (list.isEmpty())
+//			return null;
+//		return list.removeFirst();
 		if (list.isEmpty())
 			return null;
-		return list.removeFirst();
+		Student s = list.removeFirst();
+		map.remove(s.getIndex());
+		return s;
 	}
 
 	@Override
 	public Student findStudent(Student student) {
-		assert list != null; // TODO assert
-		if (list.isEmpty())
-			return null;
-		for (Student s : list) {
-			if (s.equals(student))
-//				return new Student(s);
-				return s;
-		}
-		return null;
+//		if (list.isEmpty())
+//			return null;
+//		for (Student s : list) {
+//			if (s.equals(student))
+////				return new Student(s);
+//				return s;
+//		}
+//		return null;
+		return map.get(student.getIndex());
 	}
 
 
@@ -67,6 +80,8 @@ public class PrimaryQueue implements Queue {
 	@Override
 	public void reset() {
 		list = new LinkedList<Student>();
+		//
+		map = new HashMap<String, Student>();
 	}
 	
 	@Override
