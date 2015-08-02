@@ -38,6 +38,12 @@ html, body {
 	padding: 30px;
 }
 
+.ad_header_student {
+	text-align: right;
+	color: white;
+	padding: 30px;
+}
+
 .ad_user_header {
 	color: white;
 	padding: 15px;

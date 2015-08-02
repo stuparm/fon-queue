@@ -19,15 +19,12 @@
 </head>
 <body>
 
-
 	<div class="page-header">
 		<div class="ad_header">
 			<h2>Fakultet organizacionih nauka</h2>
 			<h3>Servis studentske službe</h3>	
 		</div>
 	</div>
-
-
 
 	<c:if test="${not empty errorMessage}">
 		<div class="alert alert-danger" role="alert">

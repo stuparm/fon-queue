@@ -18,21 +18,16 @@
 <script type="text/javascript">
 	function callReset() {
 		if (confirm("Da li ste sigurni da želite da resetujete stanje svih šaltera ?") == true) {
-			xmlhttp=new XMLHttpRequest();
-			xmlhttp.open("POST","/queue/admin",true);
-			xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("POST", "/queue/admin", true);
+			xmlhttp.setRequestHeader("Content-type",
+					"application/x-www-form-urlencoded");
 			xmlhttp.send("action=RESET");
 		}
 	}
-
-
 </script>
-
-
-
 </head>
 <body>
-
 	<div class="page-header">
 		<div class="col-md-9"></div>
 		<div class="col-md-3">
@@ -48,8 +43,7 @@
 								${adminModel.lastName } </b></td>
 					</tr>
 				</table>
-				<br /> 
-				<a class="btn btn-warning"
+				<br /> <a class="btn btn-warning"
 					href="<c:url value="j_spring_security_logout" />">Odjavi se</a>
 				<!-- <button type="submit" class="btn btn-warning">Odjavi se</button> -->
 			</div>
@@ -59,10 +53,6 @@
 	<!-- STATUSNA LINIJA -->
 	<div class="alert alert-info" role="alert">
 		<div class="ad_message">${message }</div>
-		<div>
-			<button class="btn btn-warning"  onclick="callReset()">Resetuj šaltere</button>
-		</div>
-		
 	</div>
 
 	<!-- EKRAN -->
@@ -74,12 +64,9 @@
 			<!-- PRVI RED -->
 			<div class="col-md-12">
 
-				<!-- PRAZNINA -->
-				<div class="col-md-1"></div>
-
 				<!-- TABELA KORISNICI -->
 				<div class="col-md-4">
-				
+
 					<h3>Korisnici:</h3>
 					<table class="table table-bordered">
 						<tr>
@@ -95,9 +82,12 @@
 					</table>
 				</div>
 
+				<!-- PRAZNINA -->
+				<div class="col-md-1"></div>
+
 				<!-- TABELA BAZA -->
 				<div class="col-md-7">
-				
+
 					<h3>Konekcija sa bazom:</h3>
 					<table class="table table-bordered">
 						<tr>
@@ -111,27 +101,32 @@
 							</tr>
 						</c:forEach>
 					</table>
+					
+					<div>
+					<button class="btn btn-warning" onclick="callReset()">Resetuj šaltere</button>
 				</div>
+				</div>
+				
 			</div>
 
 
 			<!-- DRUGI RED -->
 			<div class="col-md-12">
 
-				<!-- PRAZNINA -->
-				<div class="col-md-1"></div>
+				<!-- PRAZNINA 
+				<div class="col-md-1"></div> -->
 
 				<!-- TABELA ADMINI -->
 				<div class="col-md-11">
-				
+
 					<h3>Administratori:</h3>
 					<table class="table table-bordered">
 						<tr>
 							<th>Korisničko ime</th>
 							<th>Ime</th>
 							<th>Prezime</th>
-							<th>Telefon</th>
 							<th>E-mail</th>
+							<th>Telefon</th>
 						</tr>
 						<c:forEach var="admin" items="${admins }">
 							<tr>
@@ -146,7 +141,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- DESNO -->
 		<div class="col-md-4">
 			<sf:form class="form-horizontal" modelAttribute="crudModel"
@@ -155,7 +150,8 @@
 				<div class="form-group">
 					<sf:label path="username" class="col-sm-3 control-label">Korisnik*:</sf:label>
 					<div class="col-sm-8">
-						<sf:input path="username" class="form-control" placeholder="Korisničko ime" />
+						<sf:input path="username" class="form-control"
+							placeholder="Korisničko ime" />
 						<sf:errors path="username" cssClass="ms_error" />
 					</div>
 				</div>
@@ -174,7 +170,7 @@
 						<sf:input path="standNumber" class="form-control" />
 						<sf:errors path="standNumber" cssClass="ms_error" />
 					</div>
-					<button type="submit" class="btn btn-default col-sm-4"
+					<button type="submit" class="btn btn-primary col-sm-4"
 						name="action" value="CRUD_INSERT_USER">Unesi korisnika</button>
 				</div>
 
@@ -195,40 +191,31 @@
 				<div class="form-group">
 					<sf:label path="email" class="col-sm-3 control-label">E-mail:</sf:label>
 					<div class="col-sm-8">
-						<sf:input path="email" class="form-control" placeholder="primer@mail.com"/>
+						<sf:input path="email" class="form-control"
+							placeholder="primer@mail.com" />
 					</div>
 				</div>
 
 				<div class="form-group">
 					<sf:label path="telephone" class="col-sm-3 control-label">Telefon:</sf:label>
 					<div class="col-sm-4">
-						<sf:input path="telephone" class="form-control" placeholder="0631234567"/>
+						<sf:input path="telephone" class="form-control"
+							placeholder="0631234567" />
 					</div>
-					<button type="submit" class="btn btn-default col-sm-3"
+					<button type="submit" class="btn btn-primary col-sm-3"
 						name="action" value="CRUD_INSERT_ADMIN">Unesi admina</button>
 				</div>
 
 				<hr>
 				<div class="form-group">
 					<div class="col-sm-3"></div>
-					<button type="submit" class="btn btn-default col-sm-3" name="action" value="CRUD_UPDATE">Izmeni</button>
-					<button type="submit" class="btn btn-default col-sm-3" name="action" value="CRUD_DELETE">Obriši</button>
+					<button type="submit" class="btn btn-primary col-sm-3"
+						style="margin-left: 15px;" name="action" value="CRUD_UPDATE">Izmeni</button>
+					<button type="submit" class="btn btn-primary col-sm-3"
+						name="action" value="CRUD_DELETE">Obriši</button>
 				</div>
-
 			</sf:form>
 		</div>
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
