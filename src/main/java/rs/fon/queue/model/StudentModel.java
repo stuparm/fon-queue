@@ -7,7 +7,7 @@ import javax.validation.constraints.Pattern;
 
 public class StudentModel {
 
-	@Pattern(regexp="^[0-9][0-9][0-9][0-9]/[0-9][0-9][0-9][0-9]$", message="Broj indeksa mora biti u formatu YYYY/XXXX. Na primer: 2012/0012")
+	@Pattern(regexp="^[0-9][0-9][0-9][0-9]/[0-9][0-9][0-9][0-9]$", message="Pravilan format: YYYY/XXXX. Primer: 2012/0012")
 	private String indexNumber;
 	
 	//@NumberFormat(pattern="^[1-3]|$")

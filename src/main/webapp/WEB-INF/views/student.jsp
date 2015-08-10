@@ -21,7 +21,7 @@
 	<div class="page-header">
 		<div class="ad_header">
 			<h4>Prijava za šaltere studentske službe</h4>
-			<div style="margin-top: -20px">
+			<div style="margin-top: -23px">
 				<a class="btn btn-warning" href="<c:url value="login" />">Log in</a>
 				<a class="btn btn-warning" style="margin-left: 15px;" href="<c:url value="/" />">Osveži</a>
 			</div>
