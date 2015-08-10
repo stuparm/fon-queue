@@ -119,7 +119,7 @@ public class AdminController {
 		} catch (EntityDoesNotExistException e) {
 			return "Korisnik/administrator sa takvim korisničkim imenom i lozinkom ne postoji.";
 		} catch (IllegalArgumentException e) {
-			return "Nije moguce obristai entitet iz baze.";
+			return "Nije moguce obristati entitet iz baze.";
 		}
 		return "Uspešno ste obrisali korisnika/administratora iz baze";
 	}

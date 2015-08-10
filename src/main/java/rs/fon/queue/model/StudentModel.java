@@ -7,14 +7,14 @@ import javax.validation.constraints.Pattern;
 
 public class StudentModel {
 
-	@Pattern(regexp="^[0-9][0-9][0-9][0-9]/[0-9][0-9][0-9][0-9]$", message="Format treba biti YYYY/IIII. Na primer: 2012/0012")
+	@Pattern(regexp="^[0-9][0-9][0-9][0-9]/[0-9][0-9][0-9][0-9]$", message="Broj indeksa mora biti u formatu YYYY/XXXX. Na primer: 2012/0012")
 	private String indexNumber;
 	
 	//@NumberFormat(pattern="^[1-3]|$")
-	@Pattern(regexp="^|[1-3]$", message="Šalter može biti samo 1, 2 ili 3")
+	@Pattern(regexp="^|[1-3]$", message="Šalter može biti samo 1, 2 ili 3.")
 	private String standNumber;
 	
-	@Pattern(regexp="^$", message="Ostavi ovo polje prazno")
+	@Pattern(regexp="^$", message="Ostavi ovo polje prazno.")
 	private String antiSpam;
 	
 	

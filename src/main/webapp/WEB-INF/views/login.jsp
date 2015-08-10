@@ -27,7 +27,7 @@
 	</div>
 
 	<c:if test="${not empty errorMessage}">
-		<div class="alert alert-danger" role="alert">
+		<div class="alert alert-danger" role="alert" style="height: 60px;">
 			<div class="ad_login-form-error">
 				<div class="col-md-1"></div>
 				<div class="col-md-11">

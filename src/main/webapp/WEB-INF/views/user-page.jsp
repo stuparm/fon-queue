@@ -41,7 +41,7 @@
 		</div>
 	</div>
 
-	<div class="alert alert-info" role="alert">
+	<div class="alert alert-info" role="alert" style="height: 60px;">
 		<div class="ad_message">${message }</div>
 	</div>
 
@@ -68,14 +68,14 @@
 
 				<div class="ad_dugme_omoguci_onemoguci">
 					<sf:form action="/queue/user" method="POST">
-						<input type="hidden" name="action" value="DISABLE_INSERT" />
-						<button class="btn btn-success" type="submit">Zatvori prijave studenata</button>
+						<input type="hidden" name="action" value="ENABLE_INSERT" />
+						<button class="btn btn-success" type="submit">Omogući prijave studenata</button>
 					</sf:form>
 					<br />
 					<sf:form action="/queue/user" method="POST">
-						<input type="hidden" name="action" value="ENABLE_INSERT" />
-						<button class="btn btn-success" type="submit">Omogući dalje prijave studenata</button>
-					</sf:form>
+						<input type="hidden" name="action" value="DISABLE_INSERT" />
+						<button class="btn btn-success" type="submit">Zatvori prijave studenata</button>
+					</sf:form>										
 				</div>
 			</div>
 		</div>

@@ -13,6 +13,7 @@ html, body {
 
 .ad_message {
 	margin-left: 50px;
+	margin-top: -10px; 
 }
 
 .ad_dugme_otvori_zatvori {
@@ -85,4 +86,12 @@ html, body {
 }
 .ms_antispam {
 	display: none;
+}
+
+.ad_prijava {
+	margin-top: 250px;
+}
+
+.ad_salter_1 {
+	
 }

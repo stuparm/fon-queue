@@ -34,14 +34,14 @@ public class FacultyStand {
 		
 		//test code
 		try {
-			primaryQueue.insert(new Student(1, "31"));
-			primaryQueue.insert(new Student(2, "32"));
-			primaryQueue.insert(new Student(3, "33"));
-			primaryQueue.insert(new Student(4, "34"));
-			primaryQueue.insert(new Student(5, "35"));
-			primaryQueue.insert(new Student(6, "36"));
-			primaryQueue.insert(new Student(7, "37"));
-			primaryQueue.insert(new Student(8, "38"));
+			primaryQueue.insert(new Student(1, "2010/0035"));
+			primaryQueue.insert(new Student(2, "2013/0251"));
+			primaryQueue.insert(new Student(3, "2014/0568"));
+			primaryQueue.insert(new Student(4, "2011/0201"));
+			primaryQueue.insert(new Student(5, "2011/0033"));
+			primaryQueue.insert(new Student(6, "2009/0717"));
+			primaryQueue.insert(new Student(7, "2014/0030"));
+			primaryQueue.insert(new Student(8, "2015/0645"));
 			ordNum=8;
 		} catch (StudentAlreadyExistException e) {
 			// TODO Auto-generated catch block

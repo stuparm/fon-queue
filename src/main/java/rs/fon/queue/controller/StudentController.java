@@ -73,7 +73,7 @@ public class StudentController {
 					
 					//dvostruka provera na spam
 					if (studentModel.getAntiSpam() != null && studentModel.getAntiSpam().length() != 0)
-						message = "Greška, ako nisi robot ostavi prazno";
+						message = "Greška, ako nisi robot ostavi prazno.";
 					else {
 						//nije robot
 						//provera korisnih parametara
@@ -104,11 +104,11 @@ public class StudentController {
 						}
 						else {
 							//greska u unosu parametara
-							message = "Pogrešno uneti parametri";
+							message = "Pogrešno uneti parametri.";
 						}	
 					}
 				} else {
-					message = "Pogrešno uneti parametri";
+					message = "Pogrešno uneti parametri.";
 				}
 			}
 		}

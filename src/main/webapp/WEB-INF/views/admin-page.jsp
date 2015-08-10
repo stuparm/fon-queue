@@ -17,7 +17,7 @@
 
 <script type="text/javascript">
 	function callReset() {
-		if (confirm("Da li ste sigurni da želite da resetujete stanje svih šaltera ?") == true) {
+		if (confirm("Da li ste sigurni da želite da resetujete stanje svih šaltera?") == true) {
 			xmlhttp = new XMLHttpRequest();
 			xmlhttp.open("POST", "/queue/admin", true);
 			xmlhttp.setRequestHeader("Content-type",
@@ -51,7 +51,7 @@
 	</div>
 
 	<!-- STATUSNA LINIJA -->
-	<div class="alert alert-info" role="alert">
+	<div class="alert alert-info" role="alert" style="height: 60px;">
 		<div class="ad_message">${message }</div>
 	</div>
 
