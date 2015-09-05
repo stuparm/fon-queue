@@ -4,6 +4,7 @@ package rs.fon.queue.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,7 +26,7 @@ public class RestController {
 	
 	
 	@RequestMapping(value="/rest/monitor", method=RequestMethod.GET)
-	public @ResponseBody MonitorJson monitor () {
+	public @ResponseBody MonitorJson monitor (HttpServletResponse response) {
 		return getRestService().getMonitorJson();
 	}
 	
